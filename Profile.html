@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+</br>
+<form method="post" action="profileCheck.php">
+	<center>
+	 <table border="1">
+		<tr>
+			<td align="center" width="600" height="50"></br><font size="6"><b>PERSON PROFILE</b></font></br></br></br></td>			
+		</tr>
+	 </table>
+	 <table border="1">
+		<tr>
+			<td width="120" height="30">&nbsp Name :</td>
+			<td width="419" height="30">&nbsp &nbsp<input size="30" name="name" type="text" value=""></td>
+			<td width="50" height="30"></td>
+		</tr>
+		<tr>
+            <td width="120" height="30">&nbsp Email :</td>
+			<td width="419" height="30">&nbsp &nbsp<input size="30" name="email" type="text" value="">&nbsp<abbr title="hint: sample@example.com"><b>i</b></abbr></td>
+			<td width="50" height="30"></td>			
+		</tr>
+		<tr>
+            <td width="120" height="30">&nbsp Gender :</td>
+			<td width="419" height="30">&nbsp &nbsp
+				        <input name="gender" type="radio" value="male">Male
+						<input name="gender" type="radio" value="Female">Female
+						<input name="gender" type="radio" value="Other">Other</td>
+			<td width="50" height="30"></td>			
+		</tr>
+		<tr>
+            <td width="120" height="30">&nbsp Date Of Birth :</td>
+			<td width="419" height="30">&nbsp &nbsp
+				        <input type="text" size="2" name="day"> -
+						<input type="text" size="2" name="month"> -
+						<input type="text" size="4" name="year" maxlength="4" >
+						<font size="2"><i>(dd-mm-yyyy)</i></font></td>
+			<td width="50" height="30"></td>			
+		</tr>
+		<tr>
+            <td width="120" height="30">&nbsp Blood Group :</td>
+			<td width="419" height="30">&nbsp &nbsp
+                    <select name="bloodGroup">
+                    	<option value="Select">Select</option>
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="AB">AB</option>
+                        <option value="AB+">AB+</option>
+                        <option value="O+">O+</option>
+                        <option value="O">O</option>
+                    </select>
+			<td width="50" height="30"></td>			
+		</tr>
+		<tr>
+            <td width="120" height="30">&nbsp Degree :</td>
+			<td width="419" height="30">&nbsp &nbsp
+				    <input type="checkbox" name ="degree" value = "SSC "/>SSC
+                    <input type="checkbox" name ="degree" value = "HSC"/>HSC
+                    <input type="checkbox" name ="degree" value = "BSc "/>BSc
+                    <input type="checkbox" name ="degree" value = "MSc "/>MSc
+			<td width="50" height="30"></td>			
+		</tr>
+		<tr>
+            <td width="120" height="30">&nbsp Photo :</td>
+			<td width="419" height="30">&nbsp &nbsp<input type="file" name ="Pfile" value = " "/></td>
+			<td width="50" height="30"></td>			
+		</tr>
+		</table>
+		<table border="1">
+			<tr>
+				<td width="600" height="30"></td>
+			</tr>
+
+			<tr>
+				<td align="right" width="600" height="50">
+					<input type="submit" value="Submit">&nbsp &nbsp &nbsp
+		            <input type="reset">&nbsp &nbsp
+
+		        </td>
+			</tr>
+		
+
+	    </table>
+	</center>
+</form>
+</body>
+</html>
+
+

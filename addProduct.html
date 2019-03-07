@@ -1,0 +1,40 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" >
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <title>Add Product</title>	
+</head>
+ <body>
+ 	<h2>Add New Product</h2>
+ 	<form method="request" action=addProduct.php >
+ 		<table>
+ 			<tr>
+ 				<td>Product Name: </td>
+ 				<td><input type="text" name="pname" style="width: 230px; height: 30px"> </td>
+ 			</tr>
+ 			<tr>
+ 				<td>Product Price: </td>
+ 				<td><input type="text" name="price" style="width: 230px; height: 30px"> </td>
+ 			</tr>
+ 			<tr>
+ 				<td>Quantity: </td>
+ 				<td><input type="text" name="quantity" style="width: 230px; height: 30px"> </td>
+ 			</tr>
+ 			<tr>
+ 				<td>Category: </td>
+ 				<td>
+ 					<select name="category" style="width: 230px; height: 30px">
+								<option value="Country" selected="selected">Select Category:</option>
+								<option value="Accessories">Accessories</option>
+								<option value="Mobile Phone">Mobile Phone</option>
+					</select>			
+				</td>
+ 			</tr>
+ 			<tr>
+ 				<td></td>
+ 				<td><input type="submit" name="submit"> </td>
+ 			</tr>
+ 		</table>
+ 	</form>
+ </body>
+</html>

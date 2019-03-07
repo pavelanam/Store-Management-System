@@ -1,0 +1,2 @@
+niaz|12345678|Admin|male|BSc |A+|01|01|1997|rohanarafath@gmail.com
+nvd|12345678|Shopkeeper|male|MSc |A|01|01|1997|ishraquearafat@outlook.com

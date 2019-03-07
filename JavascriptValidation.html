@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Registration</title>
+	
+</head>
+<body>
+
+	<div>
+		
+
+		<form name="myForm">
+			<P id="UsernameShow"></P></br>
+			<P id="PasswordShow"></P></br>
+			<P id="emailShow"></P></br>
+			<P id="gendershow"></P></br>
+
+			<P id="dayshow"></P></br>
+			<P id="monthshow"></P></br>
+			<P id="yearshow"></P></br>
+			<p id="quesshow"></p></br>
+			<p id="ansshow"></p></br>
+			<table border="0">
+				<tr>
+					<td>Username:</td>
+					<td><input id="username" type="text" name="username" ></td>
+					<td id="useralert"></td>
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td><input id="password" type="password" name="password" onkeyup="test()"></td>
+					<td id="passalert"></td>
+				</tr>
+
+				<tr>
+		            <td>Email :</td>
+					<td><input name="email" type="text" value="" id="email">&nbsp<abbr title="hint: sample@example.com"><b>i</b></abbr></td>
+					<td id="emailalert"></td>			
+		       </tr>
+
+		       	<tr>
+                        <td>Secret ques(more than two word) :</td>
+			            <td>
+				        <input name="secretques" type="text"  id="secretques">
+						
+			            <td id="secretquesalert"></td>			
+		        </tr>
+
+		           	<tr>
+                        <td>Secret ans(more than one word) :</td>
+			            <td>
+				        <input name="secretans" type="text"  id="secretans">
+						
+			            <td id="secretansalert"></td>			
+		        </tr>
+
+		        <tr>
+			            <td>Date Of Birth :</td>
+						<td>
+							        <input type="text" size="2" name="day" id="day"> -
+									<input type="text" size="2" name="month" id="month"> -
+									<input type="text" size="4" name="year" maxlength="4" id="year" >
+									<font size="2"><i>(dd-mm-yyyy)</i></font></td>
+						<td id="dobalert"></td>			
+					</tr>
+
+		       	<tr>
+					<td></td>
+					<td><input type="button" name="username" value="submit " onclick="nullcheck()"></td>
+					<td></td>
+				</tr>
+			</table>
+			
+		</form>
+	</div>
+
+<script>
+	
+	var a = 10;
+	var b = "hello";
+
+	document.getElementById('abc').innerHTML= b;
+	console.log(b);
+	alert(b);
+	document.write(b);
+
+	function colorChange(){
+		document.getElementById('abc').style.color= "red";
+	}
+
+	function login(){
+		var a = document.getElementById('username').value;
+		var b = document.getElementById('password').value;
+
+		//document.getElementById('useralert').innerHTML = a;
+		//document.getElementById('passalert').innerHTML = b;
+	
+		document.write(	a[0]);
+		document.write("User Name :"+a);
+	}
+
+	function nullcheck()
+	 {
+		var a = document.getElementById('username').value;
+
+	
+              if(a!="")
+	          {	
+					if(a[0]=="a"  || a[0]=="f" || a[0]=="g" || a[0]=="h" || a[0]=="i" || a[0]=="j" || a[0]=="k" || a[0]=="l")
+					        {
+								 if(a.length<=8)
+									{		   
+									    document.getElementById("UsernameShow").innerHTML =a;      
+									} 
+								else
+									{
+									   var error = document.getElementById('useralert');
+									   error.innerHTML = "Length At Least Two!";
+									   error.style.color = 'red';
+									}
+					           
+					        }
+					 else
+				            {
+				    	     
+				    	       var error = document.getElementById('useralert');
+			                   error.innerHTML = "Start with a letter!";
+			                   error.style.color = 'red';
+				            }
+
+		      }
+			else
+				{
+					var error = document.getElementById('useralert');
+			        error.innerHTML = "can't left empty!";
+			        error.style.color = 'red';
+				}
+
+
+                 var b = document.getElementById('password').value;
+
+
+
+
+              if(b!="")
+	          { 
+		
+					
+					 if(b[0]=="0" || b[0]=="1" || b[0]=="2" || b[0]=="3" || b[0]=="4" || b[0]=="5" || b[0]=="6" || b[0]=="7" || b[0]=="8" || b[0]=="9")
+					        {
+					         if(b.length>=8)
+					            {
+					              		       
+					              		document.getElementById("PasswordShow").innerHTML =b;         
+				                } 
+				            else
+				                {
+				    	           var error = document.getElementById('passalert');
+			                       error.innerHTML = " Password Length At Least Six!";
+			                       error.style.color = 'red';
+				                }
+					           
+					        }
+					 else
+				            {
+				    	     
+				    	     var error = document.getElementById('passalert');
+			                   error.innerHTML = "Must Start With a number!";
+			                   error.style.color = 'red';
+				            }
+
+		      }
+			else
+				{
+					var error = document.getElementById('passalert');
+			           error.innerHTML = "can't left empty!";
+			          error.style.color = 'red';
+				}
+
+
+				var c = document.getElementById('email').value;
+
+                  if(c!="")
+                  {
+
+                  	var x = document.forms["myForm"]["email"].value;
+                    var atpos = x.indexOf("@");
+                    var dotpos = x.lastIndexOf(".");
+                    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) 
+                    {
+                                var error = document.getElementById('emailalert');
+			                    error.innerHTML = "Not a valid email address!";
+			                    error.style.color = 'red';
+			                    return false;
+                    }
+
+                    document.getElementById("emailShow").innerHTML =x; 	
+                   }	
+
+                else
+				{
+					   var error = document.getElementById('emailalert');
+			           error.innerHTML = "can't left empty!";
+			           error.style.color = 'red';
+				}	
+
+
+			  var d = document.getElementById('secretques').value;
+
+              if(d!="")
+              {
+
+              	     
+                     var count = 0;
+
+                  for (var i = 0; i < d.length; i++)
+                   if (d[i] === " ") 
+                   { 
+                    count = count+1;
+                   }
+                    count = count+ 1; 
+                    if(count>2)
+                    {
+
+                    document.getElementById("quesshow").innerHTML =d; 
+                    }	
+              }
+
+
+
+
+               var e = document.getElementById('secretans').value;
+
+              if(e!="")
+              {
+
+              	     
+                     var count1 = 0;
+
+                  for (var i = 0; i < e.length; i++)
+                   if (e[i] === " ") 
+                   { 
+                    count1 = count1+1;
+                   }
+                    count1 = count1+ 1; 
+                    if(count1>1)
+                    {
+
+                    document.getElementById("ansshow").innerHTML =e; 
+                    }	
+              }
+
+
+
+              var f = document.getElementById('day').value;
+              var g = document.getElementById('month').value;
+              var h = document.getElementById('year').value;
+
+               if(f!="" &&  g!="" && h!="")
+               {
+                  document.getElementById("dayshow").innerHTML =f; 
+                  document.getElementById("monthshow").innerHTML =g; 
+                  document.getElementById("yearshow").innerHTML =h; 	
+
+               }
+               else
+               {
+
+               	       var error = document.getElementById('dobalert');
+			           error.innerHTML = "any field can't left empty!";
+			           error.style.color = 'red';
+               }
+               
+
+
+
+
+	         }
+
+	function test(){
+			var content = document.getElementById('password').value;
+			document.getElementById('passalert').innerHTML = content;
+
+	}
+
+
+</script>
+
+</body>
+</html>
